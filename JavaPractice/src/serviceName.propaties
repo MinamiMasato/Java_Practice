@@ -1,0 +1,4 @@
+# 機能名を記載したプロパティファイルの例
+function.SearchProduct=一覧機能
+function.SelectProduct=商品選択
+function.SearchProductName=商品名検索

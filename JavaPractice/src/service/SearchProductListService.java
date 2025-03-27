@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 import dto.SearchResultProduct;
 import entity.Product;
-import repository.SearchAll;
+import repository.SearchProduct;
 import repository.SearchAllInProgram;
 
 /**
@@ -16,7 +16,7 @@ public class SearchProductListService {
 
 	public List<SearchResultProduct> getList(String kbn) throws Exception {
 
-		SearchAll sarchAll = new SearchAllInProgram();
+		SearchProduct sarchProduct = new SearchAllInProgram();
 
 		// 商品リスト
 		List<Product> prodautsList;
@@ -28,10 +28,10 @@ public class SearchProductListService {
 		// 区分指定が無い時
 		if (kbn == null) {
 			// 全商品リスト取得
-			prodautsList = sarchAll.searchAll();
+			prodautsList = sarchProduct.searchAll();
 		} else {
 			// 指定された区分の商品リスト取得
-			prodautsList = sarchAll.searchByKbn(kbn);
+			prodautsList = sarchProduct.searchByKbn(kbn);
 
 		}
 		// 商品名の重複を省いた商品名リストを取得

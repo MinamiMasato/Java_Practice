@@ -4,12 +4,7 @@ import model.Controller;
 import service.SearchProductListService;
 import web.ListDisplay;
 
-/**
- * システムのコントロールクラス
- * 
- * @author minami
- */
-public class SearchProductListController implements Controller {
+public class SelectProductController implements Controller{
 
 	/**
 	 * システムの処理開始

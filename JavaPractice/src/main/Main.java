@@ -1,6 +1,7 @@
 package main;
 
-import controller.SearchProductListController;
+import factory.ControllerRegistry;
+import model.Controller;
 
 /**
  * メインクラス
@@ -8,8 +9,8 @@ import controller.SearchProductListController;
 public class Main {
 
 	public static void main(String[] args) {
-		SearchProductListController controll = new SearchProductListController();
+		ControllerRegistry controllerRegistry = ControllerRegistry.getInstance();
+		Controller controll = controllerRegistry.getControerller(args[0]);
 		controll.process(args);
 	}
-
 }

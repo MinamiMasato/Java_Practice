@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 import entity.Product;
 
-public class SearchAllInProgram implements SearchAll {
+public class SearchAllInProgram implements SearchProduct {
 
     private List<Product> products;
 
@@ -38,4 +38,8 @@ public class SearchAllInProgram implements SearchAll {
         return filtereProducts;
     }
 
+    @Override
+    public int searchByName(String productName) throws Exception {
+        return (int)products.stream().filter(product -> product.getName().equals(productName)).count();
+    }
 }
